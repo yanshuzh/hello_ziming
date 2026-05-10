@@ -1,6 +1,6 @@
 module hello
 
-go 1.24.2
+go 1.21
 
 require github.com/cloudwego/hertz v0.10.4
 

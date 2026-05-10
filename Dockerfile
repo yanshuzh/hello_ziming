@@ -1,4 +1,4 @@
-FROM golang:1.21-alpine AS builder
+FROM registry.cn-hangzhou.aliyuncs.com/library/golang:1.21-alpine AS builder
 
 WORKDIR /app
 
@@ -14,7 +14,7 @@ COPY . .
 
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .
 
-FROM alpine:latest
+FROM registry.cn-hangzhou.aliyuncs.com/acs/alpine:latest
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories && \
     apk --no-cache add ca-certificates tzdata

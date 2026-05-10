@@ -1,4 +1,4 @@
-FROM registry.cn-hangzhou.aliyuncs.com/library/golang:1.21-alpine AS builder
+FROM registry.cn-hangzhou.aliyuncs.com/google_containers/golang:1.21-alpine AS builder
 
 WORKDIR /app
 
